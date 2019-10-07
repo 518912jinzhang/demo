@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+<link rel="stylesheet" href="../css/style.css">
+<title>个人资料</title>
+</head>
+
+<body class="layui-layout-body">
+
+        <div class="container m">
+            <div class="idx_main m">
+                <h5 class="idx_tit">个人资料</h5>
+                <div class="datadet_main">
+                    <div class="datadet_m">
+                        <div class="item clearfix">
+                            <span class="tit">名&nbsp;&nbsp;&nbsp;&nbsp;称：</span>
+                            <div class="info">
+                                <p class="fz">112222（不可修改）</p>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <span class="tit">地&nbsp;&nbsp;&nbsp;&nbsp;址：</span>
+                            <div class="info">
+                                <p class="fz">青岛市北区台柳路亚麻到路1235号</p>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <span class="tit">机&nbsp;&nbsp;&nbsp;&nbsp;号：</span>
+                            <div class="info">
+                                <p class="fz">钢铁侠（可以修改）</p>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="datadet_table">
+                        <thead>
+                            <th>费率编号</th>
+                            <th>开始时间</th>
+                            <th>结束时间</th>
+                            <th>价格</th>
+                            <th>操作</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12431251</td>
+                                <td>1：00 </td>
+                                <td>2：00 </td>
+                                <td>1</td>
+                                <td>
+                                    <em class="lk_ico delete"></em>
+                                    <em class="lk_ico edit"></em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12431251</td>
+                                <td>1：00 </td>
+                                <td>2：00 </td>
+                                <td>1</td>
+                                <td>
+                                    <em class="lk_ico delete"></em>
+                                    <em class="lk_ico edit"></em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12431251</td>
+                                <td>1：00 </td>
+                                <td>2：00 </td>
+                                <td>1</td>
+                                <td>
+                                    <em class="lk_ico delete"></em>
+                                    <em class="lk_ico edit"></em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12431251</td>
+                                <td>1：00 </td>
+                                <td>2：00 </td>
+                                <td>1</td>
+                                <td>
+                                    <em class="lk_ico delete"></em>
+                                    <em class="lk_ico edit"></em>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="datadet_m">
+                        <div class="item clearfix">
+                            <span class="tit"></span>
+                            <div class="info datadet_btns">
+                                <button class="btn button">保存</button>
+                                <button class="btn giveup">放弃</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/common.js" charset="utf-8"></script>
+<script>
+layui.use(['form', 'upload', 'laydate'], function(){
+var form = layui.form
+,layer = layui.layer
+,layedit = layui.layedit
+,laydate = layui.laydate
+,upload = layui.upload;
+});
+</script>
+</body>
+</html>

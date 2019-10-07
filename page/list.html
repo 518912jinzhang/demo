@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+<link rel="stylesheet" href="../css/style.css">
+<title>列表通用</title>
+</head>
+
+<body class="layui-layout-body">
+        <div class="container">
+            <div class="idx_main bg_white">
+                <h5 class="idx_tit">数据表格</h5>
+                <div class="idx_bar layui-form">
+                    <li class="item">
+                        <div class="selectbox">
+                            <select name="" id="">
+                                <option value="1">集团</option>
+                                <option value="2">选择名称1</option>
+                                <option value="3">选择名称名称名称2</option>
+                                <option value="4">选择名称3</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="text" class="ipt ipt_txt ipt_date" placeholder="选择日期" id="test1"/>
+                    </li>
+                    <li class="item">
+                        <div class="selectbox">
+                            <select name="" id="">
+                                <option value="1">部门</option>
+                                <option value="2">部门</option>
+                                <option value="3">部门</option>
+                                <option value="4">部门</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="text" class="ipt ipt_txt ipt_search" placeholder="查找关键词"/>
+                    </li>
+                    <button class="anniu query this">查询</button>
+                    <button class="anniu add">添加</button>
+                </div>
+                <div class="p_tablew">
+                   <table class="p_table">
+                       <thead>
+                           <th width="11%">电池ID</th>
+                           <th width="11%">容量/Ah</th>
+                           <th width="10%">能量/Kwh</th>
+                           <th width="10%">时长/h</th>
+                           <th width="8%">运行状态</th>
+                           <th width="10%">电子围栏</th>
+                           <th width="8%">时长/h</th>
+                           <th width="10%">运行状态</th>
+                           <th width="10%">时间</th>
+                           <th width="12%">操作</th>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_green">正常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_red">异常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_green">正常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_green">正常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_green">正常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_green">正常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_red">异常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_red">异常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_green">正常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_green">正常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_red">异常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_green">正常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_red">异常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>0384035793</td>
+                               <td>4036830458</td>
+                               <td>00325023</td>
+                               <td>43,058</td>
+                               <td>
+                                   <em class="c_red">异常</em>
+                               </td>
+                               <td>电子围栏</td>
+                               <td>4488</td>
+                               <td>运行状态</td>
+                               <td>2019/08/12</td>
+                               <td>
+                                   <a href="javascript:;" class="lk_ico delete"></a>
+                                   <a href="javascript:;" class="lk_ico more"></a>
+                                   <a href="javascript:;" class="lk_ico yen"></a>
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table> 
+                </div>
+                <div class="pagelist">
+                    <span class="fz">共100条记录</span>
+                    <div class="pages fr">
+                        <a href="#">&lt;</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">...</a>
+                        <a href="#">50</a>
+                        <a href="#">&gt;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/common.js" charset="utf-8"></script>
+<script>
+layui.use(['form', 'upload', 'laydate'], function(){
+var form = layui.form
+,layer = layui.layer
+,layedit = layui.layedit
+,laydate = layui.laydate
+,upload = layui.upload;
+  
+  laydate.render({
+    elem: '#test1'
+  });
+  
+});
+</script>
+</body>
+</html>

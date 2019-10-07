@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+<link rel="stylesheet" href="../css/style.css">
+<title>车牌管理</title>
+</head>
+
+        <div class="container m">
+            <div class="idx_main m">
+                <h5 class="idx_tit">车牌管理</h5>
+                <div class="idx_bar layui-form">
+                    <li class="item">
+                        <div class="selectbox">
+                            <select name="" id="">
+                                <option value="1">集团</option>
+                                <option value="2">选择名称1</option>
+                                <option value="3">选择名称名称名称2</option>
+                                <option value="4">选择名称3</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="text" class="ipt ipt_txt ipt_date" placeholder="选择日期" id="test1"/>
+                    </li>
+                    <li class="item">
+                        <div class="selectbox">
+                            <select name="" id="">
+                                <option value="1">部门</option>
+                                <option value="2">部门</option>
+                                <option value="3">部门</option>
+                                <option value="4">部门</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <input type="text" class="ipt ipt_txt ipt_search" placeholder="查找关键词"/>
+                    </li>
+                    <button class="anniu query this">查询</button>
+                    <button class="anniu add">添加</button>
+                </div>
+                <div class="evm_wrap">
+                    <ul class="carnum_list clearfix">
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">普通蓝牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep pulan">
+                                    <i class="sm">津</i>
+                                    <em class="h">A</em>
+                                    <i class="y b"></i>
+                                    <em class="h">12345</em>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">警牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep jing">
+                                    <i class="sm">京</i>
+                                    <i class="y"></i>
+                                    <em class="h">A0006</em>
+                                    <i class="sm c_red">警</i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">使馆汽车号牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep shiguan">
+                                    <i class="sm c_red">使&nbsp;</i>
+                                    <em class="h">014</em>
+                                    <i class="y b"></i>
+                                    <em class="h">578</em>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">教练汽车号牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep jiaolian">
+                                    <i class="sm">京</i>
+                                    <em class="h">A</em>
+                                    <i class="y"></i>
+                                    <em class="h">F023</em>
+                                    <i class="sm">学</i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">民航车牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep minhang">
+                                    <i class="sm">民航</i>
+                                    <em class="h">-</em>
+                                    <em class="h">D3700</em>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">02式个性化号牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep gxh">
+                                    <div class="tt">
+                                        <i class="sm">京</i>
+                                        <em class="sm">A</em>
+                                    </div>
+                                    <div class="bb">
+                                        <p class="hao">VIP-688</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">单层黄牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep danceng">
+                                    <i class="sm">陕</i>
+                                    <em class="h">A</em>
+                                    <i class="y"></i>
+                                    <em class="h">08199</em>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">双层黄牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep shuangc">
+                                    <div class="tt">
+                                        <i class="sm">京</i>
+                                        <em class="sm">A</em>
+                                    </div>
+                                    <div class="bb">
+                                        <p class="hao">78665</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">挂车号牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep shuangc">
+                                    <div class="tt">
+                                        <i class="sm">京</i>
+                                        <em class="sm">A</em>
+                                    </div>
+                                    <div class="bb">
+                                        <p class="hao">F023 <em class="h">挂</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">农用号牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep nongyong">
+                                    <div class="tt">
+                                        <i class="sm">京</i>
+                                        <em class="sm">04</em>
+                                    </div>
+                                    <div class="bb">
+                                        <p class="hao">23456</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">港澳出入境车牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep gangao">
+                                    <i class="sm">粤</i>
+                                    <em class="h">Z</em>
+                                    <i class="y b"></i>
+                                    <em class="h">F023</em>
+                                    <i class="sm">港</i>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">新军牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep jun">
+                                    <em class="h c_red">KA</em>
+                                    <i class="y red"></i>
+                                    <em class="h">12345</em>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="top">
+                                <em class="tag">新武警车牌</em>
+                                <span class="tag_w">
+                                    <em class="ico edit"></em>
+                                    <em class="ico del"></em>
+                                </span>
+                            </div>
+                            <div class="carbot">
+                                <div class="chep wujing">
+                                    <em class="sm c_red">WJ皖</em>
+                                    <i class="y"></i>
+                                    <em class="h">0011</em>
+                                    <em class="h c_red">X</em>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pagelist">
+                        <span class="fz">共100条记录</span>
+                        <div class="pages fr">
+                            <a href="#">&lt;</a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">...</a>
+                            <a href="#">50</a>
+                            <a href="#">&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+
+
+
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/common.js" charset="utf-8"></script>
+<script>
+layui.use(['form', 'upload', 'laydate'], function(){
+var form = layui.form
+,layer = layui.layer
+,layedit = layui.layedit
+,laydate = layui.laydate
+,upload = layui.upload;
+  
+  laydate.render({
+    elem: '#test1'
+  });
+  
+});
+</script>
+</body>
+</html>

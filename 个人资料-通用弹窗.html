@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" href="layui/css/layui.css">
+<link rel="stylesheet" href="css/style.css">
+<title>个人资料</title>
+</head>
+
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <a href="#" class="hd_logo fl">
+            <img src="images/logo.png" alt="" class="img"/>
+        </a>
+        <div class="hd_nav fl">
+            <li class="cur">
+                <a href="#" class="tit">首页</a>
+            </li>
+            <li class="has">
+                <a href="javascript:;" class="tit">设备管理</a>
+                <div class="drop">
+                    <a href="#" class="ic_2_1">物联设备</a>
+                    <a href="#" class="ic_2_2">站点列表</a>
+                    <a href="#" class="ic_2_3">日志告警</a>
+                </div>
+            </li>
+            <li class="has">
+                <a href="javascript:;" class="tit">片区管理</a>
+                <div class="drop">
+                    <a href="#" class="ic_3_1">合伙人</a>
+                    <a href="#" class="ic_3_2">运营商</a>
+                    <a href="#" class="ic_3_3">物业</a>
+                    <a href="#" class="ic_3_4">个人</a>
+                </div>
+            </li>
+            <li class="has">
+                <a href="javascript:;" class="tit">会员系统</a>
+                <div class="drop">
+                    <a href="#" class="ic_4_1">用户</a>
+                    <a href="#" class="ic_4_2">储值卡</a>
+                </div>
+            </li>
+            <li class="has">
+                <a href="javascript:;" class="tit">财务管理</a>
+                <div class="drop">
+                    <p class="fz">收入管理</p>
+                    <a href="#" class="ic_5_1">订单管理</a>
+                    <a href="#" class="ic_5_2">发票管理</a>
+                    <p class="fz">清分结算</p>
+                    <a href="#" class="ic_5_3">提现管理</a>
+                    <a href="#" class="ic_5_4">分成明细</a>
+                    <a href="#" class="ic_5_5">转账明细</a>
+                </div>
+            </li>
+            <li class="has">
+                <a href="javascript:;" class="tit">收费模型</a>
+                <div class="drop">
+                    <a href="#" class="ic_6_1">扫码套餐</a>
+                    <a href="#" class="ic_6_2">充值套餐</a>
+                    <a href="#" class="ic_6_3">计量费率</a>
+                </div>
+            </li>
+            <li class="has">
+                <a href="javascript:;" class="tit">员工管理</a>
+                <div class="drop">
+                    <a href="#" class="ic_7_1">所有员工</a>
+                    <a href="#" class="ic_7_2">绩效管理</a>
+                    <a href="#" class="ic_7_3">排班管理</a>
+                </div>
+            </li>
+            <li class="has">
+                <a href="javascript:;" class="tit">售后管理</a>
+                <div class="drop">
+                    <a href="#" class="ic_8_1">工单管理</a>
+                    <a href="#" class="ic_8_2">故障报修</a>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:;" class="tit">
+                    <img src="images/icon_02.png" alt="" />
+                </a>
+                <div class="drop">
+                    <a href="#" class="ic_9_1">管理员</a>
+                    <a href="#" class="ic_9_2">二维码</a>
+                    <a href="#" class="ic_9_3">消息推送</a>
+                    <a href="#" class="ic_9_4">日志管理</a>
+                </div>
+            </li>
+        </div>
+        <div class="hd_user fr">
+            <div class="name">
+                <img src="images/icon_03.png" alt="" class="hdimg"/>昵称18000
+            </div>
+            <div class="drop">
+                <p class="fz clearfix">余额 <button class="button fr">提现</button></p>
+                <p class="price">￥9,999.99</p>
+                <div class="lks">
+                    <a href="#" class="order">我的订单</a>
+                    <a href="#" class="income">我的收入</a>
+                    <a href="#" class="per">个人中心</a>
+                </div>
+                <button class="quit">退出登录</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-side">
+        <div class="layui-side-scroll">
+            <ul class="side_menu">
+                <li class="item item_1">
+                    <a href="#" class="tit">数据统计</a>
+                </li>
+                <li class="item item_2">
+                    <a href="#" class="tit">物联地图</a>
+                </li>
+                <li class="item item_3 has">
+                    <a href="javascript:;" class="tit">智慧停车</a>
+                    <div class="drop">
+                        <div class="group">
+                            <h6 class="smtit">路内停车</h6>
+                            <div class="submenu">
+                                <a href="#">道路资源<i class="num">23</i></a>
+                                <a href="#">设备管理<i class="num">10</i></a>
+                                <a href="#">正在停车<i class="num">100</i></a>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <h6 class="smtit">停车场</h6>
+                            <div class="submenu">
+                                <a href="#">设备管理<i class="num">23</i></a>
+                                <a href="#">正在停车<i class="num">10</i></a>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <h6 class="smtit">业务管理</h6>
+                            <div class="submenu">
+                                <a href="#">车牌管理</a>
+                                <a href="#">停车记录</a>
+                                <a href="#">欠费记录</a>
+                                <a href="#">取证记录</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item item_4 has">
+                    <a href="javascript:;" class="tit">智慧充电</a>
+                    <div class="drop">
+                        <div class="group">
+                            <h6 class="smtit">充电桩</h6>
+                            <div class="submenu">
+                                <a href="#">直流直流桩</a>
+                                <a href="#">汽车交流桩</a>
+                                <a href="#">电摩桩</a>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <h6 class="smtit">共享充电</h6>
+                            <div class="submenu">
+                                <a href="#">充电宝</a>
+                                <a href="#">电池柜</a>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <h6 class="smtit">业务管理</h6>
+                            <div class="submenu">
+                                <a href="#">充电记录</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item item_5 has">
+                    <a href="javascript:;" class="tit">车联网</a>
+                    <div class="drop">
+                        <div class="group">
+                            <div class="submenu">
+                                <a href="#">汽车</a>
+                                <a href="#">电摩</a>
+                                <a href="#">车辆地图</a>
+                                <a href="#">租用记录</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="item item_6 has">
+                    <a href="javascript:;" class="tit">智慧用电</a>
+                    <div class="drop">
+                        <div class="group">
+                            <div class="submenu">
+                                <a href="#">智慧用电</a>
+                                <a href="#">预警日志</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-body">
+        <div class="container m">
+            <div class="idx_main m">
+                <h5 class="idx_tit">个人资料</h5>
+                <div class="datadet_main">
+                    <div class="datadet_m">
+                        <div class="item clearfix">
+                            <span class="tit">名&nbsp;&nbsp;&nbsp;&nbsp;称：</span>
+                            <div class="info">
+                                <p class="fz">112222（不可修改）</p>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <span class="tit">地&nbsp;&nbsp;&nbsp;&nbsp;址：</span>
+                            <div class="info">
+                                <p class="fz">青岛市北区台柳路亚麻到路1235号</p>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <span class="tit">机&nbsp;&nbsp;&nbsp;&nbsp;号：</span>
+                            <div class="info">
+                                <p class="fz">钢铁侠（可以修改）</p>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="datadet_table">
+                        <thead>
+                            <th>费率编号</th>
+                            <th>开始时间</th>
+                            <th>结束时间</th>
+                            <th>价格</th>
+                            <th>操作</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12431251</td>
+                                <td>1：00 </td>
+                                <td>2：00 </td>
+                                <td>1</td>
+                                <td>
+                                    <em class="lk_ico delete"></em>
+                                    <em class="lk_ico edit"></em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12431251</td>
+                                <td>1：00 </td>
+                                <td>2：00 </td>
+                                <td>1</td>
+                                <td>
+                                    <em class="lk_ico delete"></em>
+                                    <em class="lk_ico edit"></em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12431251</td>
+                                <td>1：00 </td>
+                                <td>2：00 </td>
+                                <td>1</td>
+                                <td>
+                                    <em class="lk_ico delete"></em>
+                                    <em class="lk_ico edit"></em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12431251</td>
+                                <td>1：00 </td>
+                                <td>2：00 </td>
+                                <td>1</td>
+                                <td>
+                                    <em class="lk_ico delete"></em>
+                                    <em class="lk_ico edit"></em>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="datadet_m">
+                        <div class="item clearfix">
+                            <span class="tit"></span>
+                            <div class="info datadet_btns">
+                                <button class="btn button">保存</button>
+                                <button class="btn giveup">放弃</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--弹窗-->
+<div class="pop_bg" style="display:block;"></div>
+<div class="pop pop_perdata" style="display:block;">
+    <div class="perdata_form layui-form">
+        <li class="item clearfix">
+            <span class="tit">用户名：</span>
+            <div class="info">
+                <em class="fz">xcjp</em>
+            </div>
+        </li>
+        <li class="item clearfix">
+            <span class="tit">姓名：</span>
+            <div class="info">
+                <input type="text" class="ipt ipt_txt" placeholder="请输入姓名"/>
+            </div>
+        </li>
+        <li class="item clearfix">
+            <span class="tit">出生日期：</span>
+            <div class="info">
+                <input type="text" class="layui-input ipt ipt_txt date" id="birth" placeholder="请选择开始时间">
+            </div>
+        </li>
+        <li class="item clearfix">
+            <span class="tit">开始时间：</span>
+            <div class="info">
+                  <input type="text" class="layui-input ipt ipt_txt time" id="time" placeholder="请选择开始时间">
+            </div>
+        </li>
+        <li class="item clearfix">
+            <span class="tit">性别：</span>
+            <div class="info">
+                <div class="sex_radio">
+                    <input type="radio" name="sex" value="男" title="男" checked="">
+                    <input type="radio" name="sex" value="女" title="女" >
+                </div>
+                <em class="ts fr">(单选)</em>
+            </div>
+        </li>
+        <li class="item clearfix">
+            <span class="tit">车牌颜色：</span>
+            <div class="info">
+                <div class="color_check">
+                    <input type="checkbox" name="" lay-skin="primary" title="黑" checked=""><img src="images/img_40.png" alt="" />&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="" lay-skin="primary" title="白"><img src="images/img_41.png" alt="" />&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="" lay-skin="primary" title="黄"><img src="images/img_42.png" alt="" />
+                </div>
+                <em class="ts fr">(多选)</em>
+            </div>
+        </li>
+        <li class="item clearfix">
+            <span class="tit">国   家：</span>
+            <div class="info">
+                <div class="selectbox">
+                    <select name="" id="">
+                        <option value="1">中国</option>
+                        <option value="2">中国</option>
+                        <option value="3">中国</option>
+                    </select>
+                </div>
+            </div>
+        </li>
+        <li class="item clearfix">
+            <span class="tit">备   注：</span>
+            <div class="info">
+                <textarea name="" class="ipt textarea"></textarea>
+            </div>
+        </li>
+        <li class="item clearfix">
+            <span class="tit"></span>
+            <div class="info">
+                <button class="btn">修改</button>
+                <button class="btn close">关闭</button>
+            </div>
+        </li>
+    </div>
+</div>
+
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/common.js" charset="utf-8"></script>
+<script>
+layui.use(['form', 'upload', 'laydate'], function(){
+var form = layui.form
+,layer = layui.layer
+,layedit = layui.layedit
+,laydate = layui.laydate
+,upload = layui.upload;
+
+  laydate.render({
+    elem: '#birth'
+  });
+  laydate.render({
+    elem: '#time'
+    ,type: 'time'
+  });
+  
+  
+});
+</script>
+</body>
+</html>

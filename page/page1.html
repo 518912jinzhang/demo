@@ -1,0 +1,510 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+<link rel="stylesheet" href="../css/style.css">
+<title>车牌管理</title>
+</head>
+
+<body class="layui-layout-body" style="overflow: auto;">
+
+        <div class="container">
+            <div class="idx_topmenu clearfix">
+                <li class="item item_1">
+                    <h6 class="title"><img src="../images/idx_05.png" alt="" class="ico"/>用户数</h6>
+                    <div class="bot">
+                        <p class="fz">今日新增/总计</p>
+                        <p class="font"><i>1,000/3,659</i>&nbsp;&nbsp;人</p>
+                    </div>
+                </li>
+                <li class="item item_2">
+                    <h6 class="title"><img src="../images/idx_06.png" alt="" class="ico"/>设备数</h6>
+                    <div class="bot">
+                        <p class="fz">今日新增/总计</p>
+                        <p class="font"><i>1,000/10,000</i>&nbsp;&nbsp;台</p>
+                    </div>
+                </li>
+                <li class="item item_3">
+                    <h6 class="title"><img src="../images/idx_07.png" alt="" class="ico"/>订单统计</h6>
+                    <div class="bot">
+                        <p class="fz">今日/总计</p>
+                        <p class="font">￥<i>1,000/</i>￥<i>1,000,000</i></p>
+                    </div>
+                </li>
+                <li class="item item_4">
+                    <h6 class="title"><img src="../images/idx_08.png" alt="" class="ico"/>分成统计</h6>
+                    <div class="bot">
+                        <p class="fz">今日/总计</p>
+                        <p class="font">￥<i>1,000/</i>￥<i>1,000,000</i>&nbsp;&nbsp;笔</p>
+                    </div>
+                </li>
+            </div>
+            <div class="idx_topchart m idx_module clearfix">
+                <!--<div class="idx_t_tit">
+                    <span class="tit">数据表格</span>
+                </div>-->
+                
+                <div class="lbox fl">
+                    <div class="idx_tit clearfix">
+                        数据表格  
+                        <span class="tagmenu tabmenu fr">
+                            <i class="lk">最近1年</i>
+                            <i class="lk cur">最近1个月</i>
+                            <i class="lk">最近1周</i>
+                            <i class="lk">最近24小时</i>
+                        </span>
+                        <span class="ts fr">
+                            <i class="sr">收入</i>
+                            <i class="tk">退款</i>
+                            <i class="zc">支出</i>
+                        </span>
+                    </div>
+                    <div class="chartbox">
+                        <img src="../images/idx_08.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="rbox fr">
+                    <div class="paychart">
+                        <img src="../images/idx_09.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="m idx_module">
+                <h6 class="idx_tit">运营统计</h6>
+                <div class="p_tablew">
+                   <table class="p_table">
+                       <thead>
+                           <th width="25%">业务</th>
+                           <th width="15%">今日收入</th>
+                           <th width="15%">本月</th>
+                           <th width="15%">总收入</th>
+                           <th width="15%">能耗/kwh</th>
+                           <th width="15%">趋势图</th>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td>
+                                   <i class="ico_tb qcmc"></i>汽车慢充
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_20.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <i class="ico_tb qckc"></i>汽车快充
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_21.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <i class="ico_tb dmz"></i>电摩桩
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_22.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <i class="ico_tb cdb"></i>充电宝
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_23.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <i class="ico_tb tcc"></i>停车场
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_24.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <i class="ico_tb lbbc"></i>路边泊车
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_25.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <i class="ico_tb dcg"></i>电池柜
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_26.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <i class="ico_tb gxdc"></i>共享单车
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_27.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <i class="ico_tb gxqc"></i>共享汽车
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_28.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td>
+                                   <i class="ico_tb qtyw"></i>其他业务
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_29.png" alt="" />
+                               </td>
+                           </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagelist">
+                    <span class="fz">共100条记录</span>
+                    <div class="pages fr">
+                        <a href="#">&lt;</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">...</a>
+                        <a href="#">50</a>
+                        <a href="#">&gt;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="m idx_module">
+                <h6 class="idx_tit">代理商排名</h6>
+                <div class="p_tablew">
+                   <table class="p_table">
+                       <thead>
+                           <th width="5%">排名</th>
+                           <th width="20%">代理商</th>
+                           <th width="15%">今日收入</th>
+                           <th width="15%">本月</th>
+                           <th width="15%">总收入</th>
+                           <th width="15%">能耗/kwh</th>
+                           <th width="15%">趋势图</th>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td><em class="c_green">1</em></td>
+                               <td>
+                                   <img src="../images/idx_30.png" alt="" class="t_hdimg"/>张青云
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_20.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">2</em></td>
+                               <td>
+                                   <img src="../images/idx_30.png" alt="" class="t_hdimg"/>张青云
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_21.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">3</em></td>
+                               <td>
+                                   <img src="../images/idx_30.png" alt="" class="t_hdimg"/>张青云
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_22.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">4</em></td>
+                               <td>
+                                   <img src="../images/idx_30.png" alt="" class="t_hdimg"/>张青云
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_23.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">5</em></td>
+                               <td>
+                                   <img src="../images/idx_30.png" alt="" class="t_hdimg"/>张青云
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_24.png" alt="" />
+                               </td>
+                           </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagelist">
+                    <span class="fz">共100条记录</span>
+                    <div class="pages fr">
+                        <a href="#">&lt;</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">...</a>
+                        <a href="#">50</a>
+                        <a href="#">&gt;</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="m idx_module">
+                <h6 class="idx_tit">站点排名</h6>
+                <div class="p_tablew">
+                   <table class="p_table">
+                       <thead>
+                           <th width="5%">排名</th>
+                           <th width="20%">站点</th>
+                           <th width="15%">今日收入</th>
+                           <th width="15%">本月</th>
+                           <th width="15%">总收入</th>
+                           <th width="15%">能耗/kwh</th>
+                           <th width="15%">趋势图</th>
+                       </thead>
+                       <tbody>
+                           <tr>
+                               <td><em class="c_green">1</em></td>
+                               <td>
+                                   <img src="../images/idx_31.png" alt="" class="icon"/>&nbsp;&nbsp;金牛座充电站
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_20.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">2</em></td>
+                               <td>
+                                   <img src="../images/idx_31.png" alt="" class="icon"/>&nbsp;&nbsp;水瓶座充电站
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_21.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">3</em></td>
+                               <td>
+                                   <img src="../images/idx_31.png" alt="" class="icon"/>&nbsp;&nbsp;杭州市云溪充电站
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_22.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">4</em></td>
+                               <td>
+                                   <img src="../images/idx_31.png" alt="" class="icon"/>&nbsp;&nbsp;金牛座充电站
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_23.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">5</em></td>
+                               <td>
+                                   <img src="../images/idx_31.png" alt="" class="icon"/>&nbsp;&nbsp;水瓶座充电站
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_24.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">6</em></td>
+                               <td>
+                                   <img src="../images/idx_31.png" alt="" class="icon"/>&nbsp;&nbsp;杭州市云溪充电站
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_25.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">7</em></td>
+                               <td>
+                                   <img src="../images/idx_31.png" alt="" class="icon"/>&nbsp;&nbsp;金牛座充电站
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_26.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">8</em></td>
+                               <td>
+                                   <img src="../images/idx_31.png" alt="" class="icon"/>&nbsp;&nbsp;金牛座充电站
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_27.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">9</em></td>
+                               <td>
+                                   <img src="../images/idx_31.png" alt="" class="icon"/>&nbsp;&nbsp;金牛座充电站
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_28.png" alt="" />
+                               </td>
+                           </tr>
+                           <tr>
+                               <td><em class="c_green">10</em></td>
+                               <td>
+                                   <img src="../images/idx_31.png" alt="" class="icon"/>&nbsp;&nbsp;金牛座充电站
+                               </td>
+                               <td>￥10</td>
+                               <td>￥200</td>
+                               <td>￥9,999</td>
+                               <td>1,009</td>
+                               <td>
+                                   <img src="../images/idx_29.png" alt="" />
+                               </td>
+                           </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagelist">
+                    <span class="fz">共100条记录</span>
+                    <div class="pages fr">
+                        <a href="#">&lt;</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">...</a>
+                        <a href="#">50</a>
+                        <a href="#">&gt;</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+
+
+
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/common.js" charset="utf-8"></script>
+<script>
+layui.use(['form', 'upload', 'laydate'], function(){
+var form = layui.form
+,layer = layui.layer
+,layedit = layui.layedit
+,laydate = layui.laydate
+,upload = layui.upload;
+ 
+  
+});
+</script>
+</body>
+</html>

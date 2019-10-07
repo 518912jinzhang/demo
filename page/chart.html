@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" href="../layui/css/layui.css">
+<link rel="stylesheet" href="../css/style.css">
+<title>物联地图</title>
+</head>
+
+
+        <div class="container m">
+            <div class="idx_main m">
+                <div class="map_map">
+                    <div class="mapbox">
+                        <img src="../images/img_34.jpg" alt="" class="img"/>
+                    </div>
+                    <div class="map_tb">
+                        <em class="ico ico_p"></em>
+                        <em class="ico ico_ac"></em>
+                    </div>
+                </div>
+                <div class="pub_search map_search">
+                    <input type="text" class="ipt ipt_txt" placeholder="查找关键词"/>
+                </div>
+                <div class="map_choose layui-form">
+                    <li>
+                        <input type="radio" name="aa" value="" title="全部" checked="">
+                    </li>
+                    <li>
+                        <input type="radio" name="aa" value="" title="汽车快充" >
+                    </li>
+                    <li>
+                        <input type="radio" name="aa" value="" title="汽车慢充" >
+                    </li>
+                    <li>
+                        <input type="radio" name="aa" value="" title="电摩桩" >
+                    </li>
+                    <li>
+                        <input type="radio" name="aa" value="" title="充电宝" >
+                    </li>
+                    <li>
+                        <input type="radio" name="aa" value="" title="路边泊位" >
+                    </li>
+                    <li>
+                        <input type="radio" name="aa" value="" title="停车场" >
+                    </li>
+                    <li>
+                        <input type="radio" name="aa" value="" title="电表" >
+                    </li>
+                </div>
+            </div>
+        </div>
+
+<!--弹窗-->
+<div class="pop_bg"></div>
+<div class="pop pop_map">
+    <div class="p_top tabmenu">
+        <li class="lk cur">基本信息</li>
+        <li class="lk">充电状态</li>
+        <li class="lk">电表状态</li>
+        <div class="fr">
+            <em class="ico dc"></em>
+            <em class="ico xh"></em>
+            <em class="ico close"></em>
+        </div>
+    </div>   
+    <div class="detail tabwrap">
+        <div class="map_base clearfix module">
+            <div class="lbox fl layui-form">
+                <li class="item clearfix">
+                    <span class="tit">名称</span>
+                    <div class="info">
+                        <input type="text" class="ipt ipt_txt" value="金牛座1号桩"/>
+                    </div>
+                </li>
+                <li class="item clearfix">
+                    <span class="tit">类型</span>
+                    <div class="info">
+                        <div class="selectbox">
+                            <select name="" id="">
+                                <option value="1">直流桩</option>
+                                <option value="2">直流桩</option>
+                                <option value="3">直流桩</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li class="item clearfix">
+                    <span class="tit">机号</span>
+                    <div class="info">
+                        <p class="fz">1223828362894702358</p>
+                    </div>
+                </li>
+                <li class="item clearfix">
+                    <span class="tit">ICCID</span>
+                    <div class="info">
+                        <p class="fz">1223828362894702358</p>
+                    </div>
+                </li>
+                <li class="item clearfix">
+                    <span class="tit">地址</span>
+                    <div class="info">
+                        <textarea name="" value="杭州市金牛座" class="ipt textarea"></textarea>
+                    </div>
+                </li>
+                <li class="item clearfix">
+                    <span class="tit">扫码套餐</span>
+                    <div class="info">
+                        <div class="selectbox">
+                            <select name="" id="">
+                                <option value="1">系统套餐1</option>
+                                <option value="2">系统套餐1</option>
+                                <option value="3">系统套餐1</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li class="item clearfix">
+                    <span class="tit">计费套餐</span>
+                    <div class="info">
+                        <div class="selectbox">
+                            <select name="" id="">
+                                <option value="1">1.5元/度</option>
+                                <option value="2">1.5元/度</option>
+                                <option value="3">1.5元/度</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li class="item clearfix">
+                    <span class="tit">备注</span>
+                    <div class="info">
+                        <textarea name="" value="" class="ipt textarea"></textarea>
+                    </div>
+                </li>
+                <li class="item clearfix">
+                    <input type="submit" value="确定" class="ipt submit"/>
+                </li>
+            </div>
+            <div class="rbox fr">
+                <div class="smt">
+                    <span class="fz">
+                        在线时间：<em class="c_green">5天12小时59分</em>
+                    </span>
+                    <span class="c_button fr">
+                        <select name="" id="" class="select">
+                            <option value="">重启设备</option>
+                            <option value="">重启设备</option>
+                            <option value="">重启设备</option>
+                        </select>
+                    </span>
+                </div>
+                <span class="tag">经纬度（1920148S，10842043）</span>
+                <div class="map">
+                    <img src="../images/img_35.jpg" alt="" class="img"/>
+                </div>
+                <p class="wz">固件版本号：10.0.1&nbsp;&nbsp;&nbsp;设备厂商：杭州橡树新能源</p>
+            </div>
+        </div>
+        <div class="map_cd clearfix module" style="display:none;">
+            <div class="menu fl">
+                <em class="lk">1号接口</em>
+                <em class="lk this">2号接口</em>
+                <em class="lk">3号接口</em>
+                <em class="lk">4号接口</em>
+                <em class="lk">5号接口</em>
+                <em class="lk">6号接口</em>
+                <em class="lk">7号接口</em>
+                <em class="lk">8号接口</em>
+                <em class="lk">9号接口</em>
+                <em class="lk">10号接口</em>
+                <em class="lk">11号接口</em>
+                <em class="lk">12号接口</em>
+            </div>
+            <div class="wrapbox fr">
+                <div class="bar">
+                    <button class="btn start">启动充电</button>
+                    <button class="btn pause">停止充电</button>
+                </div>
+                <div class="cenbox clearfix">
+                    <div class="lbox fl">
+                        <div class="showchart">
+                            <div class="chart">
+                                <img src="../images/img_37.jpg" alt="" class="pic"/>
+                            </div>
+                            <div class="wbox">
+                                <p class="percent"><i>50</i>%</p>
+                                <p class="ww">充电中...</p>
+                            </div>
+                        </div>
+                        <ul class="list">
+                            <li>
+                                <p class="fz">
+                                    <img src="../images/icon_61.png" alt="" class="ico"/> 时间
+                                </p>
+                                <p class="wz">24H</p>
+                            </li>
+                            <li>
+                                <p class="fz">
+                                    <img src="../images/icon_62.png" alt="" class="ico"/> 金额
+                                </p>
+                                <p class="wz">￥63.0</p>
+                            </li>
+                            <li>
+                                <p class="fz">
+                                    <img src="../images/icon_63.png" alt="" class="ico"/> 50%
+                                </p>
+                                <p class="wz">24H</p>
+                            </li>
+                        </ul>
+                        <div class="barline">
+                            <div class="row">
+                                <em class="fz">电压</em>
+                                <em class="barbox b1"><i style="width:50%"></i></em>
+                                <em class="wz">220V/400V</em>
+                            </div>
+                            <div class="row">
+                                <em class="fz">电流</em>
+                                <em class="barbox b2"><i style="width:70%"></i></em>
+                                <em class="wz">18A/300A</em>
+                            </div>
+                            <div class="row">
+                                <em class="fz">剩余时间</em>
+                                <em class="barbox b3"><i style="width:30%"></i></em>
+                                <em class="wz">300分钟</em>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rbox fr">
+                        <div class="num">订单号：11384093584</div>
+                        <div class="det">
+                            <li>支付金额 <i class="fr">￥1920.00</i></li>
+                            <li>支付账号 <i class="fr">1893743974993053059</i></li>
+                            <li>卡号 <i class="fr">8773619103472839901</i></li>
+                            <li>充电方式 <i class="fr">自动充满</i></li>
+                            <li>充电金额 <i class="fr c_red">￥100.00</i></li>
+                        </div>
+                    </div>
+                </div>
+                <div class="botbox">
+                    <div class="chartbox">
+                        <img src="../images/img_36.jpg" alt="" class="img"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map_db module" style="display:none;">
+            <div class="topbox clearfix">
+                <div class="lbox fl">
+                    <div class="sm clearfix layui-form">
+                        <em class="fz">拉闸<i>（再次点击开关即实现合闸）</i></em>
+                        <span class="switch fr">
+                            <input type="checkbox" name="close" lay-skin="switch" lay-text="">
+                        </span>
+                    </div>
+                    <div class="box">
+                        <div class="row clearfix">
+                            <span class="fz">实时电量</span>
+                            <span class="fz fr"><i>12,345</i>kwh</span>
+                        </div>
+                        <div class="row">
+                            <span class="wz">温度 <i>123</i>℃</span>
+                            <span class="wz fr">零线电流<i>1</i>A</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rbox fr">
+                    <table class="table">
+                        <thead>
+                            <th>电相</th>
+                            <th>电压 / V</th>
+                            <th>电流 / A</th>
+                            <th>功率 / W</th>
+                            <th>电量 / kwh</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A相</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>9405</td>
+                                <td>930485</td>
+                            </tr>
+                            <tr>
+                                <td>B相</td>
+                                <td>120</td>
+                                <td>3</td>
+                                <td>023810</td>
+                                <td>2930284</td>
+                            </tr>
+                            <tr>
+                                <td>C相</td>
+                                <td>02483</td>
+                                <td>4594</td>
+                                <td>98343</td>
+                                <td>98308</td>
+                            </tr>
+                            <tr>
+                                <td>合计</td>
+                                <td>029302</td>
+                                <td>24038</td>
+                                <td>98347</td>
+                                <td>02831</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="botbox">
+                <div class="chartbox">
+                    <img src="../images/img_36.jpg" alt="" class="img"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../layui/layui.js"></script>
+<script src="../js/common.js" charset="utf-8"></script>
+<script>
+layui.use(['form', 'upload', 'laydate'], function(){
+var form = layui.form
+,layer = layui.layer
+,layedit = layui.layedit
+,laydate = layui.laydate
+,upload = layui.upload;
+  
+
+  
+});
+
+$('.map_tb .ico').click(function(){
+    $('.pop_bg').show();
+    $('.pop_map').show();
+});
+$('.pop_map .close').click(function(){
+    $('.pop_bg').hide();
+    $('.pop_map').hide();
+});
+$('.pop_bg').click(function(){
+    $('.pop_bg').hide();
+    $('.pop_map').hide();
+});
+</script>
+</body>
+</html>

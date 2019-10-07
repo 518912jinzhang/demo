@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" href="layui/css/layui.css">
+<link rel="stylesheet" href="css/style.css">
+<title>登录</title>
+</head>
+
+<body>
+<div class="login_main">
+    <div class="login_top">
+        <div class="auto clearfix">
+            <img src="images/logo-1.png" alt="" class="smlogo"/>
+            <a href="#" class="lk fr">返回首页</a>
+        </div>
+    </div>
+    <div class="login_formwrap">
+        <div class="login_menu tabmenu">
+            <li class="lk cur">账号登录</li>
+            <li class="lk">手机登录</li>
+            <em class="lk t_ico"></em>
+        </div>
+        <div class="wrap tabwrap">
+            <div class="module">
+                <div class="login_form">
+                    <li class="item">
+                        <input type="text" class="ipt ipt_txt ipt_user" placeholder="请输入账号"/>
+                    </li>
+                    <li class="item">
+                        <input type="password" class="ipt ipt_txt ipt_psd" placeholder="请输入密码"/>
+                    </li>
+                    <li class="item clearfix">
+                        <input type="text" class="ipt ipt_txt ipt_code fl" placeholder="验证码"/>
+                        <span class="getcode fr">
+                            <img src="images/login_05.png" alt="" />
+                        </span>
+                    </li>
+                    <input type="submit" value="登录" class="ipt submit"/>
+                    <div class="bot">
+                        <a href="#" class="fz">忘记密码？</a>
+                        <span class="fz fr">
+                            没有账号，<a href="#" class="c_green">立即注册</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="module" style="display:none;">
+                <div class="login_form">
+                    <li class="item">
+                        <input type="text" class="ipt ipt_txt ipt_user" placeholder="请输入账号"/>
+                    </li>
+                    <li class="item clearfix">
+                        <input type="text" class="ipt ipt_txt ipt_code fl" placeholder="验证码"/>
+                        <span class="getcode fr">
+                            <img src="images/login_05.png" alt="" />
+                        </span>
+                    </li>
+                    <input type="submit" value="登录" class="ipt submit"/>
+                    <div class="bot">
+                        <a href="#" class="fz">忘记密码？</a>
+                        <span class="fz fr">
+                            没有账号，<a href="#" class="c_green">立即注册</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="module login_ewm" style="display:none;">
+                <img src="images/img_30.jpg" alt="" class="pic"/>
+                <p class="fz">请使用<em class="c_green">微信</em>扫描登录</p>
+            </div>
+        </div>
+    </div>
+    <div class="login_bot">版权信息</div>
+    
+</div>
+
+
+
+
+
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/common.js" charset="utf-8"></script>
+<script>
+layui.use(['form', 'upload', 'laydate'], function(){
+var form = layui.form
+,layer = layui.layer
+,layedit = layui.layedit
+,laydate = layui.laydate
+,upload = layui.upload;
+
+  
+});
+</script>
+</body>
+</html>

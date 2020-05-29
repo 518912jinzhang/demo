@@ -1,231 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-  <link rel="stylesheet" href="layui/css/layui.css">
-<link rel="stylesheet" href="css/style.css">
-<title>index</title>
-</head>
-
-<body class="layui-layout-body">
-<div class="layui-layout layui-layout-admin">
-    <div class="layui-header">
-        <a onclick="jump('page/page1.html')" class="hd_logo fl">
-            <img src="images/logo.png" alt="" class="img"/>
-        </a>
-        <div class="hd_nav fl">
-            <li class="cur">
-                <a onclick="jump('page/page1.html')" class="tit">首页</a>
-            </li>
-            <li class="has">
-                <a href="javascript:;" class="tit">设备管理</a>
-                <div class="drop">
-                    <a onclick="jump('page/manage.html')" class="ic_2_1">物联设备</a>
-                    <a onclick="jump('page/manage.html')" class="ic_2_2">站点列表</a>
-                    <a onclick="jump('page/list.html')" class="ic_2_3">日志告警</a>
-                </div>
-            </li>
-            <li class="has">
-                <a href="javascript:;" class="tit">片区管理</a>
-                <div class="drop">
-                    <a onclick="jump('page/list.html')" class="ic_3_1">合伙人</a>
-                    <a onclick="jump('page/list.html')" class="ic_3_2">运营商</a>
-                    <a onclick="jump('page/list.html')" class="ic_3_3">物业</a>
-                    <a onclick="jump('page/personal.html')" class="ic_3_4">个人</a>
-                </div>
-            </li>
-            <li class="has">
-                <a href="javascript:;" class="tit">会员系统</a>
-                <div class="drop">
-                    <a onclick="jump('page/list.html')" class="ic_4_1">用户</a>
-                    <a onclick="jump('page/card.html')" class="ic_4_2">储值卡</a>
-                </div>
-            </li>
-            <li class="has">
-                <a href="javascript:;" class="tit">财务管理</a>
-                <div class="drop">
-                    <p onclick="jump('page/list.html')" class="fz">收入管理</p>
-                    <a onclick="jump('page/list.html')" class="ic_5_1">订单管理</a>
-                    <a onclick="jump('page/list.html')" class="ic_5_2">发票管理</a>
-                    <p onclick="jump('page/list.html')" class="fz">清分结算</p>
-                    <a onclick="jump('page/list.html')" class="ic_5_3">提现管理</a>
-                    <a onclick="jump('page/list.html')" class="ic_5_4">分成明细</a>
-                    <a onclick="jump('page/list.html')" class="ic_5_5">转账明细</a>
-                </div>
-            </li>
-            <li class="has">
-                <a href="javascript:;" class="tit">收费模型</a>
-                <div class="drop">
-                    <a onclick="jump('page/list.html')" class="ic_6_1">扫码套餐</a>
-                    <a onclick="jump('page/chongzhi.html')" class="ic_6_2">充值套餐</a>
-                    <a onclick="jump('page/list.html')" class="ic_6_3">计量费率</a>
-                </div>
-            </li>
-            <li class="has">
-                <a href="javascript:;" class="tit">员工管理</a>
-                <div class="drop">
-                    <a onclick="jump('page/list.html')" class="ic_7_1">所有员工</a>
-                    <a onclick="jump('page/list.html')" class="ic_7_2">绩效管理</a>
-                    <a onclick="jump('page/list.html')" class="ic_7_3">排班管理</a>
-                </div>
-            </li>
-            <li class="has">
-                <a href="javascript:;" class="tit">售后管理</a>
-                <div class="drop">
-                    <a onclick="jump('page/list.html')" class="ic_8_1">工单管理</a>
-                    <a onclick="jump('page/list.html')" class="ic_8_2">故障报修</a>
-                </div>
-            </li>
-            <li>
-                <a href="javascript:;" class="tit">
-                    <img src="images/icon_02.png" alt="" />
-                </a>
-                <div class="drop">
-                    <a class="ic_9_1">管理员</a>
-                    <a onclick="jump('page/code.html')" class="ic_9_2">二维码</a>
-                    <a onclick="jump('page/list.html')" class="ic_9_3">消息推送</a>
-                    <a onclick="jump('page/list.html')" class="ic_9_4">日志管理</a>
-                </div>
-            </li>
-        </div>
-        <div class="hd_user fr">
-            <div class="name">
-                <img src="images/icon_03.png" alt="" class="hdimg"/>昵称18000
-            </div>
-            <div class="drop">
-                <p class="fz clearfix">余额 <button class="button fr">提现</button></p>
-                <p class="price">￥9,999.99</p>
-                <div class="lks">
-                    <a onclick="jump('page/list.html')" class="order">我的订单</a>
-                    <a onclick="jump('page/list.html')" class="income">我的收入</a>
-                    <a onclick="jump('page/list.html')" class="per">个人中心</a>
-                </div>
-                <button class="quit">退出登录</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="layui-side">
-        <div class="layui-side-scroll">
-            <ul class="side_menu">
-                <li class="item item_1 cur">
-                    <a onclick="jump('page/list.html')" class="tit">数据统计</a>
-                </li>
-                <li class="item item_2">
-                    <a onclick="jump('page/chart.html')" class="tit">物联地图</a>
-                </li>
-                <li class="item item_3 has">
-                    <a href="javascript:;" class="tit">智慧停车</a>
-                    <div class="drop">
-                        <div class="group">
-                            <h6 class="smtit">路内停车</h6>
-                            <div class="submenu">
-                                <a onclick="jump('page/list.html')">道路资源<i class="num">23</i></a>
-                                <a onclick="jump('page/list.html')">设备管理<i class="num">10</i></a>
-                                <a onclick="jump('page/list.html')">正在停车<i class="num">100</i></a>
-                            </div>
-                        </div>
-                        <div class="group">
-                            <h6 class="smtit">停车场</h6>
-                            <div class="submenu">
-                                <a onclick="jump('page/list.html')">设备管理<i class="num">23</i></a>
-                                <a onclick="jump('page/list.html')">正在停车<i class="num">10</i></a>
-                            </div>
-                        </div>
-                        <div class="group">
-                            <h6 class="smtit">业务管理</h6>
-                            <div class="submenu">
-                                <a onclick="jump('page/car.html')">车牌管理</a>
-                                <a onclick="jump('page/list.html')">停车记录</a>
-                                <a onclick="jump('page/list.html')">欠费记录</a>
-                                <a onclick="jump('page/list.html')">取证记录</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="item item_4 has">
-                    <a href="javascript:;" class="tit">智慧充电</a>
-                    <div class="drop">
-                        <div class="group">
-                            <h6 class="smtit">充电桩</h6>
-                            <div class="submenu">
-                                <a onclick="jump('page/list.html')">直流直流桩</a>
-                                <a onclick="jump('page/list.html')">汽车交流桩</a>
-                                <a onclick="jump('page/list.html')">电摩桩</a>
-                            </div>
-                        </div>
-                        <div class="group">
-                            <h6 class="smtit">共享充电</h6>
-                            <div class="submenu">
-                                <a onclick="jump('page/list.html')">充电宝</a>
-                                <a onclick="jump('page/list.html')">电池柜</a>
-                            </div>
-                        </div>
-                        <div class="group">
-                            <h6 class="smtit">业务管理</h6>
-                            <div class="submenu">
-                                <a  onclick="jump('page/list.html')">充电记录</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="item item_5 has">
-                    <a href="javascript:;" class="tit">车联网</a>
-                    <div class="drop">
-                        <div class="group">
-                            <div class="submenu">
-                                <a onclick="jump('page/list.html')">汽车</a>
-                                <a onclick="jump('page/list.html')">电摩</a>
-                                <a onclick="jump('page/list.html')">车辆地图</a>
-                                <a onclick="jump('page/list.html')">租用记录</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="item item_6 has">
-                    <a href="javascript:;" class="tit">智慧用电</a>
-                    <div class="drop">
-                        <div class="group">
-                            <div class="submenu">
-                                <a onclick="jump('page/page1.html')">智慧用电</a>
-                                <a onclick="jump('page/list.html')">预警日志</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="layui-body">
-        <iframe id="iframes" height="100%" width="100%;" frameborder="0" scrolling="auto" src="page/page1.html"></iframe>
-    </div>
-</div>
-
-
-
-
-
-
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="layui/layui.js"></script>
-<script src="js/common.js" charset="utf-8"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>电子合同</title>
+<link type="text/css" rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
+<link type="text/css" rel="stylesheet" href="./css/main.css" />
+<script type="text/javascript" src="./js/jquery-2.1.4.min.js" ></script>
+<script src="./js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="./js/jquery.mobile-1.4.5.min.js" ></script>
+<script type="text/javascript" src="./js/http.js" ></script>
 <script>
-layui.use(['form', 'upload', 'laydate'], function(){
-var form = layui.form
-,layer = layui.layer
-,layedit = layui.layedit
-,laydate = layui.laydate
-,upload = layui.upload;  
-});
-
-function jump(path){
-    $("#iframes").attr("src",path)
-}
-
+	window.onload = myfun;
+	function myfun(){ 　　 
+		getList();
+		tokens();
+	} 　
+	//获取手机端Url传递的token参数，并且存储
+	function tokens(){
+		var Request = new Object();
+		Request = GetRequest();
+		var token;
+		// document.cookie="token=1114I1"
+		// alert('111111',document.cookie);
+		token = Request['token'] == ""?"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNzc4ODM1MzE5MyIsImlhdCI6MTU5MDYzMDAzNywiZXhwIjoxNTkxMjM0ODM3fQ.nA4Nt4kUGhhPSRdj3zjHqDOJahCP-4I-ufIJKV2ifG02g5xg1gJDmxGIbtUtVfGsoq_sZhHJQa3d787vp8boKQ":Request['token']; 
+		localStorage.setItem("token","eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxNzc4ODM1MzE5MyIsImlhdCI6MTU5MDYzMDAzNywiZXhwIjoxNTkxMjM0ODM3fQ.nA4Nt4kUGhhPSRdj3zjHqDOJahCP-4I-ufIJKV2ifG02g5xg1gJDmxGIbtUtVfGsoq_sZhHJQa3d787vp8boKQ");
+	}
+	function getList(){
+		$.ajax({
+            type: "GET",
+            url:baseUrl+"app/contract/listContract?token="+localStorage.getItem("token"),
+            async: false,
+            contentType: "application/json",
+            success: function(res) {
+				//重调成功之后刷新list列表
+				List(res.data)
+            }
+        });
+	}
+		//获取列表之后循环放入页面中
+	function List(list){
+		var signed="";
+		var notSign="";
+		list.notSign = [
+			{
+			companyId: null,
+			errStep: null,
+			fileId: null,
+			fileName: "合同模板测试_zhangj1111111.pdf",
+			msg: null,
+			signStatus: 1,
+			userId: null,
+			userType: 1,
+			},
+			{
+			companyId: null,
+			errStep: null,
+			fileId: null,
+			fileName: "合同模板测试_zhangj222.pdf",
+			msg: null,
+			signStatus: 1,
+			userId: null,
+			userType: 1,
+			},
+			{
+			companyId: null,
+			errStep: null,
+			fileId: null,
+			fileName: "合同模板测试_zhangj333.pdf",
+			msg: null,
+			signStatus: 1,
+			userId: null,
+			userType: 1,
+			},
+			{
+			companyId: null,
+			errStep: null,
+			fileId: null,
+			fileName: "合同模板测试_zhangj333.pdf",
+			msg: null,
+			signStatus: 1,
+			userId: null,
+			userType: 1,
+			},
+			{
+			companyId: null,
+			errStep: null,
+			fileId: null,
+			fileName: "合同模板测试_zhangj333.pdf",
+			msg: null,
+			signStatus: 1,
+			userId: null,
+			userType: 1,
+			},
+			{
+			companyId: null,
+			errStep: null,
+			fileId: null,
+			fileName: "合同模板测试_zhangj333.pdf",
+			msg: null,
+			signStatus: 1,
+			userId: null,
+			userType: 1,
+			},
+		]
+		console.log(list);
+		//已签署合同列表
+        for(var i=0; i<list.signed.length;i++){
+            signed+="<div class='alo'><div class='ui-grid-a sty3'><a class='ui-block-a' href='dzht.html?zt=0' target='blank'>"+list.signed[i].fileName+"</a></div></div>";
+			document.getElementById("yiqianshu").innerHTML = signed; 
+		}
+		//待签署合同列表
+		for(var i=0; i<list.notSign.length;i++){
+            notSign+="<div class='alo'><div class='ui-grid-a sty3'><a class='ui-block-a' href='dzht.html?zt=1' target='blank'>"+list.notSign[i].fileName+"</a><div class='ui-block-b'><a onclick=\"chongdiao('"+list.notSign[i].userType+"')\">重调</a></div></div></div>";
+			document.getElementById("daiqianshu").innerHTML = notSign; 
+        }
+	}
+		//重调的接口处
+    function chongdiao(val){
+		$.ajax({
+            type: "GET",
+            url:baseUrl+"app/contract/handSign?userType="+val+"&token="+localStorage.getItem("token"),
+            async: false,
+			contentType: "application/json",
+			beforeSend: function() {
+                document.getElementById("loading").style.display = "block";
+            },
+            success: function(res) {
+				if(res.code == 0){
+					console.log(res);
+					//重调成功之后刷新list列表
+					getList();
+					location.reload();
+					document.getElementById("loading").style.display = "none";
+				}else{
+					// alert(res.msg);
+					layer.msg(res.msg)
+					document.getElementById("loading").style.display = "none";
+				}
+            }
+        });
+    }
 </script>
-<style>
-    .inactive{color:red;}
-    .inactives{color:blue} 
-</style>
+</head>
+<body>
+<div data-role="page" class="pages">
+<div data-role = "content-floud" class="bgs">			
+	<div class="mains">
+		<div class="nosigned">
+			<div class="hear">
+				<a href="#" >待签署合同</a>
+			</div>
+			<ul class="contentop">
+				<li id="daiqianshu">
+				</li>
+			</ul>
+		</div>
+		<div class="signed">
+			<div class="hear">
+				<a href="#" >已签署合同</a>
+			</div>
+			<ul class="contentop">
+				<li id="yiqianshu">
+				</li>
+			</ul>
+		</div>
+	</div>			
+</div>	
+</div>
+<div class="load" id="loading">
+	<div class="loader" title="2">
+		<svg version="1.1" id="loader-1"  x="0px" y="0px" width="100px" height="100px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+			<path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+				<animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite" />
+			</path>
+		</svg>
+		<div class="load-msg"> 加载中,请稍后....</div>
+	</div>
+</div>
 </body>
 </html>
+

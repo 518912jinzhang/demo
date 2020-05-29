@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>PDF电子合同</title>
+		<style>
+            #the-canvas{
+                margin:0 auto;
+            }
+            .main{
+                width: 100%;
+                /* height: 90rem; */
+                overflow-y: scroll;
+            }
+            .caozuo{
+                display: none;
+                position: relative;;
+                bottom: 30rem;
+                color: #fff;
+                height: 6rem;
+                width: 60%;
+                margin: 0 auto;
+                margin-left: 20%;
+                font-size: 2.5rem;
+                background: dodgerblue;
+                border-radius: 2.5rem;
+                border: none;
+                z-index: 100000;
+            }
+            .load{
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                z-index: 10000;
+                background-color: rgba(0, 0, 0, 0.1);
+                display: none;
+            }
+            .loader{
+                width: 140px;
+                height: 140px;
+                /* border: 1px solid red; */
+                text-align: center;
+                position: absolute;
+                top: calc(50% - 70px);
+                left: calc(50% - 70px);
+                padding-top: 15px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 5px;
+            }
+            #loader-1{
+                width: 60px;
+                height: 60px;
+            }
+            .load-msg{
+                height: 50px;
+                line-height: 50px;
+                color: #fff;
+                font-size: 13px;
+                /* margin-top: 20px; */
+            }
+            svg path, svg rect {
+                fill: #17a085;
+            }
+		</style>
+	</head>
+
+	<body>
+        <div class="main">
+            <div id="the-canvas"></div>
+        </div>
+        <button class="caozuo" id="caozuos" onclick="gaizhang()">盖章</button>
+        <div class="load" id="loading">
+            <div class="loader" title="2">
+                <svg version="1.1" id="loader-1"  x="0px" y="0px" width="100px" height="100px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <path fill="#000" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                        <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite" />
+                    </path>
+                </svg>
+                <div class="load-msg"> 加载中,请稍后....</div>
+            </div>
+        </div>
+	</body>
+	
+	<script src="./js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/pdf.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/pdf.worker.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/http.js" ></script>
+    <script type="text/javascript">
+        // alert(localStorage.getItem("token"));
+        let data="";
+        var zt;
+        window.onload = myfun;
+        function myfun(){ 　　 
+            var Request = new Object();
+            Request = GetRequest();
+            zt = Request['zt'];
+            if(zt == 0){//已经完成盖章操作
+                document.getElementById("caozuos").style.display = "none";
+            }else{
+                document.getElementById("caozuos").style.display = "block";
+            }
+            pdfData();
+        } 　
+        function pdfData(){
+            $.ajax({
+                type: "GET",
+                url:baseUrl+"app/contract/getFile?token="+localStorage.getItem("token")+"&userType=1",
+                async: false,
+                contentType: "application/json",
+                beforeSend: function() {
+                    document.getElementById("loading").style.display = "block";
+                },
+                success: function(res) {
+                    console.log(res);
+                    if(res.code == 0){
+                        pdfs(res.data);
+                        document.getElementById("loading").style.display = "none";
+                    }else{
+                        document.getElementById("loading").style.display = "none";
+                        // alert(res.msg);
+                        layer.msg(res.msg)
+                    }
+                        
+                },
+                error:function(){
+                    document.getElementById("loading").style.display = "none";
+                }
+            });
+        }
+        function gaizhang(){
+            $.ajax({
+                type: "GET",
+                url:baseUrl+"app/contract/handSign?userType=1&token="+localStorage.getItem("token"),
+                async: false,
+                contentType: "application/json",
+                beforeSend: function() {
+                    //loading
+                    document.getElementById("loading").style.display = "block";
+                },
+                success: function(res) {
+                    console.log(res);
+                    if(res.code == 0){
+                        // 盖章成功再次请求pdf接口显示我呢见内容
+                        pdfData();
+                        document.getElementById("caozuos").style.display = "none";
+                        document.getElementById("loading").style.display = "none";
+                    }else{
+                        document.getElementById("loading").style.display = "none";
+                        // alert(res.msg);
+                        layer.msg(res.msg)
+                    }
+                }
+            });
+        }
+        function pdfs(data){
+            var pdfData = atob(data);
+            var CMAP_URL = '../../js/common/cmaps/';//自己的pdfjs字库的路径
+            // pdfjsLib.GlobalWorkerOptions.workerSrc ='../build/pdf.worker.js';//自己的路径
+            pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://unpkg.com/pdfjs-dist@2.0.489/build/pdf.worker.min.js';
+            var loadingTask = pdfjsLib.getDocument({
+                data: pdfData,
+                cMapUrl: CMAP_URL,
+                cMapPacked: true,
+            }); 
+            let pdfView = document.getElementById('the-canvas');
+            loadingTask.promise.then(function(pdf) {
+                for(var i=1;i<pdf.numPages+1;i++){
+                    pdf.getPage(i).then(function(page) {
+                        var scale = 1.8;
+                        var viewport = page.getViewport({ scale: scale, });
+                        // alert(viewport.width);
+                        let canvas = document.createElement('canvas');
+                        let canvasContext = canvas.getContext('2d');
+                        canvas.width = viewport.width-150;
+                        canvas.height = viewport.width * 841.229/ 592.28;
+                        pdfView.appendChild(canvas);
+                        // 将页面呈现到画布上
+                        let renderContext = {
+                            canvasContext: canvasContext,
+                            viewport: viewport
+                        }
+                        page.render(renderContext);
+                    });
+                }    
+            });
+        }
+        </script> 
+</html>
